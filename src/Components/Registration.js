@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LoginPage from './LoginPage';
 
 function RegistrationPage() {
   const[userName,setUsername]=useState("");
@@ -39,8 +40,9 @@ return (
         <input type='text' value={Mobile}onChange={(e)=>{setMobile(e.target.value)}}></input>
         <label>Address</label>
         <input type='text'value={address}onChange={(e)=>{setAddress(e.target.value)}}></input>
-        <button onClick={()=>{checkRegister()}}>Register</button>
-      </div>
+       <br /> <button onClick={()=>{checkRegister()}}>Register</button>
+       <LoginPage registerUserName={userName} registerPassword={password}/> 
+  </div>
     )
   }
 export default RegistrationPage;
