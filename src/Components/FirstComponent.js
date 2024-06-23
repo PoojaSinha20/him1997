@@ -1,20 +1,20 @@
 import React from 'react'
 import "../App.css";
- function FirstComponent() {
+ function FirstComponent(props) {
   return (
       <div>
-        <h1 style={{color:"blue"}}>Hello Himanshu Soni</h1>
-        <h2>This Is Second Component</h2>
+        <h1>{props.propsName} Hello Himanshu Soni</h1>
+        <h2> This Is Second Component</h2>
         {/* <input type="text" /> */}
-        <SecondComponent/>
+        <SecondComponent propsName={props.propsName}/>
       </div>
     )
   }
-  function SecondComponent() {
+  function SecondComponent({propsName}) {
           return(
           <div>
-          <h1>
-          This Is Second Component
+          <h1>{propsName}
+           This Is Second Component
           </h1>
           
           </div>
