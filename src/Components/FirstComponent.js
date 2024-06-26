@@ -6,7 +6,7 @@ import "../App.css";
         <h1>{props.propsName} Hello Himanshu Soni</h1>
         <h2> This Is Second Component</h2>
         {/* <input type="text" /> */}
-        <SecondComponent propsName={props.propsName}/>
+        {/* <SecondComponent propsName={props.propsName}/> */}
       </div>
     )
   }

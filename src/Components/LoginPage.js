@@ -1,22 +1,25 @@
 import React ,{useState} from 'react';
-function LoginPage(props) {
+import { useNavigate } from 'react-router-dom';
+function LoginPage() {
         // var count=0;
         //   const [counter,setCounter] 
         // = useState(0);
         const [userName,setUsername]=useState("")
         const [password,setPassword]=useState("")
+        const navigate=useNavigate();
 
         function checkLogin() {
-         if (userName === props.registerUserName) {
-          if (password === props.registerPassword) {
+         if (userName !== "") {
+          if (password !== "") {
             alert('Login Success');
+            navigate("/HomePage");
             
           }else{
-            alert(' password is not matching with registration page');
+            alert(' Password is Required');
           }
           
          }else{
-          alert('Username is not matching with registration page');
+          alert('Username is Required');
          }
         }
 
